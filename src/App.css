@@ -1,38 +1,54 @@
 .App {
   text-align: center;
+  background: linear-gradient(
+    45deg,
+    rgb(2, 42, 54),
+    rgb(7, 96, 122),
+    rgb(29, 128, 158),
+    rgb(36, 161, 199),
+    rgb(144, 224, 248)
+  );
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.movie-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 10px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card {
+  width: 20rem;
+  margin: 1.8rem;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card:hover {
+  box-shadow: 0px 0px 8px 8px #cc2e5d;
+}
+.card-body{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
 }
-
-.App-link {
-  color: #61dafb;
+.card-text {
+  align-items: flex-end;
 }
+.card-title {
+  font-size: 40px;
+  font-weight: 900;
+  text-decoration: none;
+  background: linear-gradient(to right, #ccc 50%, #ff5858 50%, #cc2e5d);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 0.5s ease-out;
+}
+.card-title:hover {
+  background-position: -100%;
+}
+.add-movie-btn{
+  background-color: crimson;
+}
+.movie-rating{
+  text-align: center;
+  letter-spacing: 4px;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
